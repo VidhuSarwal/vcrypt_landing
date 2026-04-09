@@ -186,10 +186,15 @@ export function Hero() {
           <Button variant="primary" className="h-11 px-6 text-base" onClick={handleGetStarted}>
             Get Started Free
           </Button>
-          <Button variant="outline" className="h-11 px-6 text-base gap-2">
+          <a
+            href={import.meta.env.VITE_GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md px-6 h-11 text-base font-medium transition-all duration-150 cursor-pointer border border-border bg-surface text-foreground hover:border-primary/40 hover:text-primary gap-2"
+          >
             <GitHubIcon className="h-4 w-4" />
             View on GitHub
-          </Button>
+          </a>
         </motion.div>
 
         <motion.p

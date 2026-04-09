@@ -18,7 +18,19 @@ const faqs = [
   },
   {
     q: "Is Vcrypt open source?",
-    a: "Yes. Vcrypt is fully open source under the MIT License. You can audit the code, self-host the entire stack, and contribute to the project on GitHub.",
+    a: (
+      <>
+        Yes. Vcrypt is fully open source under the MIT License. You can audit the code, self-host the entire stack, and contribute to the project on{" "}
+        <a
+          href={import.meta.env.VITE_GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline font-medium"
+        >
+          GitHub
+        </a>.
+      </>
+    ),
   },
   {
     q: "How is this different from encryption?",

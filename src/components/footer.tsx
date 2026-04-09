@@ -22,13 +22,18 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-foreground mb-4">Links</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "GitHub", href: "#" },
+                { label: "GitHub", href: import.meta.env.VITE_GITHUB_URL, external: true },
                 { label: "Docs", href: "#" },
                 { label: "Pricing", href: "#pricing" },
                 { label: "Security", href: "#" },
               ].map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-sm text-muted hover:text-primary transition-colors">
+                  <a
+                    href={l.href}
+                    target={l.external ? "_blank" : undefined}
+                    rel={l.external ? "noopener noreferrer" : undefined}
+                    className="text-sm text-muted hover:text-primary transition-colors"
+                  >
                     {l.label}
                   </a>
                 </li>
